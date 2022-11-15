@@ -10,3 +10,12 @@ class Solution {
         return answer;
     }
 }
+
+// 다른유저의 풀이
+// import java.time.*;
+// class Solution {
+//     public int solution(int age) {
+//         LocalDate today = LocalDate.now();
+//         return today.getYear() - age + 1;
+//     }
+// }
