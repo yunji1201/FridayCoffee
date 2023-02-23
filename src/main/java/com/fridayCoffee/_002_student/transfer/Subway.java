@@ -1,4 +1,4 @@
-package com.fridayCoffee._2_student.transfer;
+package com.fridayCoffee._002_student.transfer;
 
 public class Subway extends Transfer{
 

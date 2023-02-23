@@ -1,4 +1,4 @@
-package com.fridayCoffee._4_freeDrink;
+package com.fridayCoffee._004_freeDrink;
 
 public class test2 {
 

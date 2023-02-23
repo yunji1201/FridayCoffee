@@ -1,4 +1,4 @@
-package com.fridayCoffee._5_letter;
+package com.fridayCoffee._005_letter;
 
 public class Letter {
     public static void main(String[] args) {

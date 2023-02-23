@@ -1,4 +1,4 @@
-package com.fridayCoffee._8_odd;
+package com.fridayCoffee._008_odd;
 
 public class Odd {
     public static void main(String[] args) {

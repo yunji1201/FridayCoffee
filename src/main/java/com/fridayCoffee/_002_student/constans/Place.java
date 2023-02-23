@@ -1,4 +1,4 @@
-package com.fridayCoffee._2_student.constans;
+package com.fridayCoffee._002_student.constans;
 
 public enum Place {
     HOME("10, 50"),

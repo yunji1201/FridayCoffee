@@ -1,7 +1,7 @@
-package com.fridayCoffee._2_student.transfer;
+package com.fridayCoffee._002_student.transfer;
 
 
-import static com.fridayCoffee._2_student.Go.scan;
+import static com.fridayCoffee._002_student.Go.scan;
 
 public abstract class Transfer {
     int transferNum;

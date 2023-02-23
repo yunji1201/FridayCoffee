@@ -1,8 +1,8 @@
-package com.fridayCoffee._2_student;
+package com.fridayCoffee._002_student;
 
 
-import com.fridayCoffee._2_student.constans.Place;
-import com.fridayCoffee._2_student.constans.Transportation;
+import com.fridayCoffee._002_student.constans.Place;
+import com.fridayCoffee._002_student.constans.Transportation;
 
 import java.util.Collections;
 import java.util.HashMap;

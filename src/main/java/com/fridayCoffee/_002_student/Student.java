@@ -1,7 +1,7 @@
-package com.fridayCoffee._2_student;
+package com.fridayCoffee._002_student;
 
 
-import com.fridayCoffee._2_student.transfer.Transfer;
+import com.fridayCoffee._002_student.transfer.Transfer;
 
 public class Student {
     String name;

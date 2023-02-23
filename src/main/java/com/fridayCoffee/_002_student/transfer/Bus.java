@@ -1,13 +1,12 @@
-package com.fridayCoffee._2_student.transfer;
+package com.fridayCoffee._002_student.transfer;
 
-public class Airplane extends Transfer {
+public class Bus extends Transfer {
 
-    int charge = 50000;
+    int charge = 1000;
 
-    public Airplane(int num) {
+    public Bus(int num) {
         this.transferNum = transferNum;
     }
-
 
     @Override
     public void take(int passenger) {

@@ -1,4 +1,4 @@
-package com.fridayCoffee._6_evaluation;
+package com.fridayCoffee._006_evaluation;
 
 public class Eval {
     public static void main(String[] args) {

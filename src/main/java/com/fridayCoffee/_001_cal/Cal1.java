@@ -1,4 +1,4 @@
-package com.fridayCoffee._1_cal;
+package com.fridayCoffee._001_cal;
 
 import java.util.Scanner;
 

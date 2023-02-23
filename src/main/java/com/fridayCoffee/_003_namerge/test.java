@@ -1,4 +1,4 @@
-package com.fridayCoffee._3_namerge;
+package com.fridayCoffee._003_namerge;
 
 public class test {
 
