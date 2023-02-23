@@ -13,7 +13,7 @@ class Solution {
         int answer = 0;
         int count = 0;
         while(count == k){
-
+            System.out.println("");
             count ++;
         }
         return answer;
