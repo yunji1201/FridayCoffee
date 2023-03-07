@@ -10,13 +10,16 @@ public class StringCalc {
 
 class Solution {
     public int solution(String my_string) {
-        int answer = 0;
-        String pattern = "^[0-9]*$";
-        String[] arr = my_string.split("");
-        for(String s : arr){
-            s.matches(pattern)?Integer.parseInt(s):(s=="+")?answer+=
+        String[] arr = my_string.split(" ");
+        int answer = Integer.parseInt(arr[0]);
+        for (int i = 1; i < arr.length; i += 2) {
+            int nextNum = Integer.parseInt(arr[i + 1]);
+            if (arr[i].equals("+")) {
+                answer += nextNum;
+            } else {
+                answer -= nextNum;
+            }
         }
-
         return answer;
     }
 }
