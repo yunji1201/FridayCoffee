@@ -2,15 +2,16 @@ package com.fridayCoffee._83_trio;
 
 public class Trio {
     public static void main(String[] args) throws Exception {
-        Solution3 solution = new Solution3();
+        Solution solution = new Solution();
         System.out.println("======================================");
-        int[] numbers = {-3, -2, -1, 0, 1, 2, 3};
-        System.out.println("my answer : " + solution.solution(numbers)); // 5
+        int[] numbers = {-2, 3, 0, 2, -5};
+        System.out.println("my answer : " + solution.solution(numbers)); // 2
         System.out.println("======================================");
     }
 }
 
-class Solution {
+// 3중 for문으로 풀기
+class Solution0 {
     public int solution(int[] number) {
         int answer = 0;
         int first = 0;
@@ -26,6 +27,35 @@ class Solution {
             first++;
         }
         return answer;
+    }
+}
+
+// dfs 사용하기
+class Solution {
+    int answer = 0;
+
+    public int solution(int[] number) {
+        boolean[] visited = new boolean[number.length];
+        dfs(number, 0, 0, visited);
+        System.out.println(answer);
+        return answer;
+    }
+
+    private void dfs(int[] number, int student, int sum, boolean[] visited) {
+        if (student == 3) {
+            if (sum == 0) {
+                answer++;
+            }
+            return;
+        }
+
+        for (int i = 0; i < number.length; i++) {
+            if (!visited[i] && (i == 0 || visited[i-1] == true || number[i-1] != number[i])) {
+                visited[i] = true;
+                dfs(number, student + 1, sum + number[i], visited);
+                visited[i] = false;
+            }
+        }
     }
 }
 
@@ -129,3 +159,4 @@ class Solution3 {
         }
     }
 }
+
