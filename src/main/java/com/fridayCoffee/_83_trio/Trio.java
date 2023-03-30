@@ -10,7 +10,7 @@ public class Trio {
     }
 }
 
-// 3중 for문으로 풀기
+// 3중 for문으로 풀기 (누가 이렇게 푸냐고요..)
 class Solution0 {
     public int solution(int[] number) {
         int answer = 0;
@@ -33,31 +33,32 @@ class Solution0 {
 // dfs 사용하기
 class Solution {
     int answer = 0;
+    int student = 0;
+    int start = 0;
+    int[] selected = new int[3];
 
     public int solution(int[] number) {
-        boolean[] visited = new boolean[number.length];
-        dfs(number, 0, 0, visited);
-        System.out.println(answer);
+
+        dfs(number, student, selected, start);
         return answer;
     }
 
-    private void dfs(int[] number, int student, int sum, boolean[] visited) {
+    private void dfs(int[] number, int student, int[] selected, int start) {
         if (student == 3) {
-            if (sum == 0) {
+            if (selected[0] + selected[1] + selected[2] == 0) {
                 answer++;
             }
             return;
         }
 
-        for (int i = 0; i < number.length; i++) {
-            if (!visited[i] && (i == 0 || visited[i-1] == true || number[i-1] != number[i])) {
-                visited[i] = true;
-                dfs(number, student + 1, sum + number[i], visited);
-                visited[i] = false;
-            }
+        for (int i = start; i < number.length; i++) {
+            selected[student] = number[i];
+            dfs(number, student + 1, selected, i + 1); // 중복없애야하니까 i+1 하기!
+            selected[student] = 0;
         }
     }
 }
+
 
 class Solution1 {
     static int[] triple;
