@@ -2,6 +2,13 @@ import java.util.*;
 
 public class Solution {
     public int solution(int n) {
-        return Arrays.stream(String.valueOf(n).split("")).mapToInt(i->Integer.parseInt(i)).sum();
+        int answer = 0;
+
+        while (true) {
+            answer += n % 10;
+            if (n < 10) break;
+            n = n / 10;
+        }
+        return answer;
     }
 }
