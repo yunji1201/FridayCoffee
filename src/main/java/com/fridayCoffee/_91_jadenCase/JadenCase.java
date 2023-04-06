@@ -28,6 +28,7 @@ class Solution {
     }
 }
 
+// 하다가 테스트 많이 틀린거
 class Solution1 {
     public String solution(String s) {
         StringBuilder sb = new StringBuilder();
@@ -49,6 +50,7 @@ class Solution1 {
     }
 }
 
+// 하다가 테스트 많이 틀린거
 class Solution2 {
     public String solution(String s) {
         StringBuilder sb = new StringBuilder();
@@ -71,8 +73,7 @@ class Solution2 {
 }
 
 
-//////////////////////////////////////////////////////////////////////////////////////
-
+///< 다른 사람 풀이 >///////////////////////////////////////////////////
 
 class Solution3 {
     public String solution(String s) {
