@@ -13,6 +13,7 @@ public class Network {
     }
 }
 
+// my code
 class Solution {
     public int solution(int n, int[][] computers) {
         int answer = 0;
@@ -38,6 +39,7 @@ class Solution {
     }
 }
 
+// other code
 class Solution1 {
     static boolean[] visit;
     static List<Integer>[] list;
@@ -80,6 +82,7 @@ class Solution1 {
     }
 }
 
+// other code
 class Solution2 {
     boolean visited[];
     int[][] data;
