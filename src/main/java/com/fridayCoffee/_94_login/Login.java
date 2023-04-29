@@ -1,5 +1,8 @@
 package com.fridayCoffee._94_login;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Login {
     public static void main(String[] args) throws Exception {
         Solution solution = new Solution();
@@ -13,8 +16,13 @@ public class Login {
 
 class Solution {
     public String solution(String[] id_pw, String[][] db) {
-        String answer = "";
+        Map<String, String> users = new HashMap<>();
 
-        return answer;
+        for (String[] info : db) {
+            users.put(info[0], info[1]);
+        }
+
+        return users.containsKey(id_pw[0]) ? (users.get(id_pw[0]).equals(id_pw[1]) ? "login" : "wrong pw") : "fail";
+
     }
 }
