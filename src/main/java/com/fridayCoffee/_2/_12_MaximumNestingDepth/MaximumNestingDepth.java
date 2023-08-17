@@ -1,5 +1,7 @@
 package com.fridayCoffee._2._12_MaximumNestingDepth;
 
+import java.util.Stack;
+
 public class MaximumNestingDepth {
 //https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/
 //    Input: s = "(1)+((2))+(((3)))"
@@ -17,8 +19,23 @@ public class MaximumNestingDepth {
 
 class Solution {
     public int maxDepth(String s) {
+//        Stack stack = new Stack();
+        int max = 0; // 최대
+        int now = 0; // 현재
+        char[] charArray = s.toCharArray();
 
-        return 0;
+        for (char c : charArray) {
+            if (c == '(') {
+                now++;
+//                stack.push(c);
+                max = Math.max(max, now);
+
+            } else if (c == ')') {
+                now--;
+//                stack.pop();
+            }
+        }
+        return max;
     }
 }
 
