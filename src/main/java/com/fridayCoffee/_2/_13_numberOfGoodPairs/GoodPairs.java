@@ -15,7 +15,14 @@ public class GoodPairs {
 
 class Solution {
     public int numIdenticalPairs(int[] nums) {
-
-        return 0;
+        int count = 0;
+        int[] numList = new int[101];
+        for (int num : nums) {
+            if (numList[num] > 1) {
+                count += numList[num];
+            }
+            numList[num]++;
+        }
+        return count;
     }
 }
