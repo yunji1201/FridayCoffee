@@ -8,15 +8,9 @@ public class CountSmallerNum {
       */
 
     public static void main(String[] args) throws Exception {
-        Solution solution = new Solution();
+//        Solution solution = new Solution();
         System.out.println("======================================");
         int[] prices = {1, 2, 3, 2, 3};
-        System.out.println("my answer : " + solution.solution(prices)); // [4, 3, 1, 1, 0]
-    }
-}
-
-class Solution {
-    public int[] smallerNumbersThanCurrent(int[] nums) {
-
+//        System.out.println("my answer : " + solution.solution(prices)); // [4, 3, 1, 1, 0]
     }
 }
