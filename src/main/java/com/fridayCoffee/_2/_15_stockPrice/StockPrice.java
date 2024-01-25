@@ -21,11 +21,15 @@ public class StockPrice {
 
 class Solution {
     public int[] solution(int[] prices) {
-        int[] answer = new int[prices.length];
+        int[] answer = new int[prices.length]; // 결과를 저장할 배열
 
-        for (int i = 0; i < prices.length; i++) {
+        for (int i = 0; i < prices.length; i++) { // 돌기 시작
             for (int j = i + 1; j < prices.length; j++) {
+
+                // 현재 시점에서 가격이 안 떨어졌으니 해당 시점 기간을 1초 증가
                 answer[i]++;
+
+                // 만약 현재 시점의 가격이 이후 시점의 가격보다 크다면 가격이 떨어졌으니까 반복문 종료
                 if (prices[i] > prices[j]) {
                     break;
                 }
