@@ -38,3 +38,76 @@ class Solution {
         return answer;
     }
 }
+
+// 다른 사람 풀이 # 1
+class Solution1 {
+    public int[] solution(int[] prices) {
+        int len = prices.length;
+        int[] answer = new int[len];
+        int i, j;
+        for (i = 0; i < len; i++) {
+            for (j = i + 1; j < len; j++) {
+                answer[i]++;
+                if (prices[i] > prices[j])
+                    break;
+            }
+        }
+        return answer;
+    }
+}
+// 가장 많은 사람들의 풀이. 이중 for문 사용하는게 제일 일반적인 것으로 보임.
+
+
+// 다른 사람 풀이 # 2
+class Solution2 {
+    public int[] solution(int[] prices) {
+
+        Stack<Integer> beginIdxs = new Stack<>();
+        int i=0;
+        int[] terms = new int[prices.length];
+
+        beginIdxs.push(i);
+        for (i=1; i<prices.length; i++) {
+            while (!beginIdxs.empty() && prices[i] < prices[beginIdxs.peek()]) {
+                int beginIdx = beginIdxs.pop();
+                terms[beginIdx] = i - beginIdx;
+            }
+            beginIdxs.push(i);
+        }
+        while (!beginIdxs.empty()) {
+            int beginIdx = beginIdxs.pop();
+            terms[beginIdx] = i - beginIdx - 1;
+        }
+
+        return terms;
+    }
+}
+// stack 클래스 사용법을 알아야겠다고 생각.
+
+// GPT 풀이
+class Solution3 {
+
+    public static int[] solution(int[] prices) {
+        int n = prices.length;
+        int[] answer = new int[n]; // 결과를 저장할 배열 초기화
+        Stack<Integer> stack = new Stack<>(); // 주식 가격이 떨어지지 않은 기간을 저장할 스택
+
+        for (int i = 0; i < n; i++) {
+            // 스택이 비어있지 않고 현재 주식 가격이 스택의 마지막 요소보다 작다면
+            while (!stack.isEmpty() && prices[i] < prices[stack.peek()]) {
+                int j = stack.pop(); // 주식 가격이 떨어졌을 때, 해당 위치를 스택에서 꺼내옴
+                answer[j] = i - j; // 현재 시점에서 떨어지기까지의 기간을 계산하여 저장
+            }
+
+            stack.push(i); // 현재 시점을 스택에 추가
+        }
+
+        // 주식 가격이 떨어지지 않은 경우, 끝까지 가격이 떨어지지 않았으므로 기간은 끝까지 남아있는 기간
+        while (!stack.isEmpty()) {
+            int j = stack.pop();
+            answer[j] = n - 1 - j;
+        }
+
+        return answer;
+    }
+}
