@@ -29,7 +29,7 @@ public class Fibonacci {
     }
 
     // 다른 사람 풀이
-    class Fibonacci {
+    class Fibonacci1 {
         public long fibonacci(int num) {
             long answer = 0;
             long[] array = new long[num + 1]; //인덱스는 0부터 시작하니까 크기를 지정할때 num+1로
@@ -44,16 +44,10 @@ public class Fibonacci {
             return array[num];
         }
 
-        // 아래는 테스트로 출력해 보기 위한 코드입니다.
-        public static void main(String[] args) {
-            Fibonacci c = new Fibonacci();
-            int testCase = 3;
-            System.out.println(c.fibonacci(testCase));
-        }
     }
 
     // 다른 사람 풀이 #2
-    class Solution {
+    class Solution1 {
 
         public int solution(int n) {
             int answer = 0;
